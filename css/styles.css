@@ -14,7 +14,7 @@ Variables
 
 :root {
   /* Colors */
-  --clr-white: #fffafa;
+  --clr-white: #ffffff;
   --clr-black: #000000;
   --clr-gray: #5b5757;
   /* Fonts */
@@ -38,6 +38,7 @@ Global Styles
   box-sizing: border-box;
 }
 body {
+  position: absolute;
   background: var(--clr-white);
   color: var(--clr-black);
 }
@@ -51,8 +52,11 @@ a:visited {
   color: var(--clr-black);
 }
 h1 {
+  margin: 2rem 0 0 0;
   font-family: var(--ff-primary);
   font-weight: 700;
+  font-size: 11rem;
+  text-align: left;
 }
 h2 {
   color: var(--clr-gray);
@@ -64,4 +68,47 @@ p {
   font-family: var(--ff-secondary);
   font-weight: 200;
   /* font-size: 32px; */
+}
+
+/*
+=============== 
+Main Styles
+===============
+*/
+.container {
+  margin: 0 auto;
+  padding: 1.5%;
+}
+nav {
+  transform: rotate(-90deg);
+  position: fixed;
+  top: 250px;
+  right: -95px;
+  height: 30px;
+  width: 20rem;
+  /* border: 1px solid black; */
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav ul li a {
+  font-family: var(--ff-cuaternary);
+  font-weight: 300;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.hero-container {
+  width: 80%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero-header {
+  margin: 0 auto;
 }
