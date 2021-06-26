@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
     <!-- S  E O -->
     <!-- <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="description" content="Free Web tutorials for HTML and CSS">
@@ -16,9 +17,9 @@
     <!-- Vertical N    a   v   b   a   r -->
     <nav>
       <ul>
-        <li><a href="#">Poemas</a></li>
         <li><a href="#">Autor</a></li>
-        <li><a href="#">Destacado</a></li>
+        <li><a href="#">Reciente</a></li>
+        <li><a href="#">Poemas</a></li>
       </ul>
     </nav>
     <!-- H    e   r   o -->
@@ -35,27 +36,68 @@
             height="20px"
             width="20px"
           />
-          <span>6:50:38 PM, Colombia</span>
+          <img
+            src="img/cloud-and-sun.png"
+            alt="cloud and sun"
+            height="20px"
+            width="20px"
+          />
+          <span class="current-date">6:50:38 PM, Colombia</span>
         </div>
       </header>
       <p>
         Poemario es un intento por compartir mis ideas, pensamientos y dramas,
-        esperando encontrar quizás algún interlocutor sensible.
+        esperando encontrar algún interlocutor sensible que se identifique.
       </p>
     </div>
     <!-- S  w   i   t   c   h -->
     <!-- End S  w   i   t   ch -->
     <main>
-      <section class="highlighted">
-        <div class="highlighted-title">
-          <h2>Destacado</h2>
+      <section class="author">
+        <div class="author-title">
+          <h2>Autor</h2>
         </div>
-        <div class="highlighted-list">
+        <div class="author-info">
+          <p class="author-info-1">
+            Empecé a escribir para entender y canalizar las cosas que (me)
+            suceden, en el camino me di cuenta de la necesidad de poesía en la
+            que estamos sumidos todo el tiempo. Hoy veo la poesía como un enorme
+            iceberg de verdades y emociones que se derrite y se revela así mismo
+            con el propósito de transformarnos.
+          </p>
+          <div class="author-img">
+            <img
+              src="img/fernando.jpg"
+              alt="author seeing the horizon"
+              width="900px"
+              height="350px"
+            />
+          </div>
+          <p class="author-info-1">
+            Mi nombre es Fernando, mis amigos me dicen Fer (o Eli
+            <i
+              class="em em-bird"
+              aria-role="presentation"
+              aria-label="BIRD"
+            ></i>
+            ). Desde hace un tiempo tenía el deseo de crear esta especie de
+            carta abierta en donde compartir un poco sobre mí y sobre mi
+            percepción de diferentes aspectos de la vida. Hoy es una realidad,
+            así que bienvenido.
+          </p>
+        </div>
+      </section>
+      <section class="recent">
+        <div class="recent-title">
+          <h2>Reciente</h2>
+        </div>
+        <div class="recent-list">
           <ul>
-            <li><a href="#">Dilución entre colores</a></li>
+            <li><a href="#">Ausencia</a></li>
             <li><a href="#">La puerta</a></li>
             <li><a href="#">Nunca presto mi almohada</a></li>
-            <li><a href="#">Universo de mentiras</a></li>
+            <li><a href="#">Olvidé</a></li>
+            <li><a href="#">La complicidad</a></li>
           </ul>
         </div>
       </section>
