@@ -1,0 +1,67 @@
+/*
+=============== 
+Fonts
+===============
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@300&family=Raleway:wght@200;300&family=Rubik:wght@300;600;700&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* Colors */
+  --clr-white: #fffafa;
+  --clr-black: #000000;
+  --clr-gray: #5b5757;
+  /* Fonts */
+  --ff-primary: 'Rubik', sans-serif;
+  --ff-secondary: 'Raleway', sans-serif;
+  --ff-tertiary: 'Baloo Chettan 2', cursive;
+  --ff-cuaternary: 'Antonio', sans-serif;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--clr-white);
+  color: var(--clr-black);
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: var(--clr-black);
+}
+h1 {
+  font-family: var(--ff-primary);
+  font-weight: 700;
+}
+h2 {
+  color: var(--clr-gray);
+  font-family: var(--ff-primary);
+  font-weight: 300;
+}
+p {
+  color: var(--clr-black);
+  font-family: var(--ff-secondary);
+  font-weight: 200;
+  /* font-size: 32px; */
+}
