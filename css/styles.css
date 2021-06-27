@@ -42,6 +42,9 @@ body {
   background: var(--clr-white);
   color: var(--clr-black);
 }
+section {
+  margin-top: 4rem;
+}
 ul {
   list-style-type: none;
 }
@@ -56,6 +59,7 @@ h1 {
   font-family: var(--ff-primary);
   font-weight: 700;
   font-size: 11rem;
+  line-height: 1;
   text-align: left;
 }
 h2 {
@@ -99,7 +103,7 @@ nav ul {
 nav ul li a {
   font-family: var(--ff-cuaternary);
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
 }
 
@@ -111,4 +115,27 @@ nav ul li a {
 
 .hero-header {
   margin: 0 auto;
+}
+
+.hero-info {
+  margin-left: auto;
+  width: 60%;
+}
+
+.hero-info p {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: right;
+}
+
+.current-date {
+  display: flex;
+  align-items: center;
+}
+
+.current-date span {
+  color: var(--clr-gray);
+  font-family: var(--ff-primary);
+  font-weight: 300;
+  font-size: 1.4rem;
 }
