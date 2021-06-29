@@ -206,7 +206,7 @@ nav ul li a {
 }
 
 /* Sections */
-/* Author */
+/*    A   u   t   h   o   r   */
 
 .title {
   margin-top: 2rem;
@@ -235,7 +235,7 @@ nav ul li a {
   height: 1.2em;
 }
 
-/* Recent */
+/*    R    e   c   e   n   t    */
 
 .recent-list ul li a {
   font-family: var(--ff-primary);
@@ -288,4 +288,35 @@ nav ul li a {
 .b a,
 .e a {
   text-align: right !important;
+}
+
+/*    P   o   e   m   s    */
+.poem-list ul li {
+  display: flex;
+  align-items: center;
+}
+
+.poem {
+  font-family: var(--ff-primary);
+  font-size: 7rem;
+}
+
+.poem:hover + span {
+  display: inline-block;
+}
+
+.poem:hover {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
+.arrow {
+  color: transparent;
+  background-image: url('/img/arrow-archery.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-size: 5rem;
+  width: 4rem;
+  height: 4rem;
+  display: none;
 }
