@@ -132,9 +132,12 @@ nav ul li a {
   width: 80%;
   height: 100%;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo p {
+.logo span {
   color: var(--clr-black);
   font-family: var(--ff-primary);
   font-weight: 500;
@@ -145,7 +148,7 @@ nav ul li a {
   vertical-align: center;
 }
 
-#logo {
+#logo-toggle {
   opacity: 1;
   animation: showLogo 5s ease-in infinite;
 }

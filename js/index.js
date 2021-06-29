@@ -34,16 +34,29 @@ showIcon();
 
 // Logo transition
 
-const logo = document.getElementById('logo');
-const words = ['mdn', 'mesita', 'de noche'];
-function getRandomNumber() {
-  return Math.floor(Math.random() * words.length);
+const logo = document.getElementById('logo-toggle');
+const words = ['mesita', 'de noche'];
+
+function toggleClosure() {
+  let bool = true;
+  return function () {
+    bool = !bool;
+    return bool;
+  };
 }
+const toggleBool = toggleClosure();
 
 const showLogoWords = () => {
-  const randomNumber = getRandomNumber();
-  console.log(randomNumber);
-  logo.innerHTML = words[randomNumber];
+  if (toggleBool()) {
+    logo.innerHTML = words[1];
+  } else {
+    logo.innerHTML = words[0];
+  }
 };
 
 setInterval(showLogoWords, 10000);
+
+// Random generator
+function getRandomNumber() {
+  return Math.floor(Math.random() * words.length);
+}
