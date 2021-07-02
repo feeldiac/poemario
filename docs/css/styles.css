@@ -55,6 +55,7 @@ ul {
   list-style-type: none;
 }
 a {
+  color: var(--clr-black);
   text-decoration: none;
 }
 a:visited {
@@ -322,7 +323,7 @@ nav ul li a {
 
 .arrow {
   color: transparent;
-  background-image: url('/img/arrow-archery.svg');
+  background-image: url('../img/arrow-archery.svg');
   background-repeat: no-repeat;
   background-size: 100%;
   font-size: 5rem;
