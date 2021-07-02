@@ -242,10 +242,6 @@ nav ul li a {
 
 /*    R    e   c   e   n   t    */
 
-.recent-list {
-  /* width: ; */
-}
-
 .recent-grid {
   display: grid;
   grid-template-columns: [x0] 1fr [x1] 1fr [x2];
