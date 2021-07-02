@@ -64,7 +64,8 @@ h1 {
   margin: 2rem 0 0 0;
   font-family: var(--ff-primary);
   font-weight: 700;
-  font-size: 11rem;
+  /* font-size: 11rem; */
+  font-size: clamp(6rem, 3rem + 12vw, 11rem);
   line-height: 1;
   text-align: left;
 }
@@ -240,9 +241,8 @@ nav ul li a {
 
 /*    R    e   c   e   n   t    */
 
-.recent-list ul li a {
-  font-family: var(--ff-primary);
-  font-size: 5rem;
+.recent-list {
+  /* width: ; */
 }
 
 .recent-grid {
@@ -251,6 +251,12 @@ nav ul li a {
   grid-template-rows: [y0] 1fr [y1] 0.5fr [y2] 0.5fr [y3] 0.5fr [y4] 0.5fr [y5];
   column-gap: 2rem;
   row-gap: 1rem;
+}
+
+.recent-list ul li a {
+  font-family: var(--ff-primary);
+  /* font-size: 5rem; */
+  font-size: clamp(2rem, 7vw, 5rem);
 }
 
 .a {
@@ -301,7 +307,8 @@ nav ul li a {
 
 .poem {
   font-family: var(--ff-primary);
-  font-size: 7rem;
+  /* font-size: 7rem; */
+  font-size: clamp(5rem, 11.5vw, 7rem);
 }
 
 .poem:hover + span {
