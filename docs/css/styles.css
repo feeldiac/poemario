@@ -62,11 +62,12 @@ a:visited {
   color: var(--clr-black);
 }
 h1 {
-  margin: 2rem 0 0 0;
+  margin-top: 2rem;
+  margin-bottom: 0;
   font-family: var(--ff-primary);
   font-weight: 700;
-  font-size: clamp(6rem, 3rem + 12vw, 13rem);
-  line-height: 1;
+  font-size: clamp(6rem, 3rem + 12vw, 12.5rem);
+  line-height: 0.87;
   text-align: left;
 }
 h2 {
@@ -350,5 +351,94 @@ nav ul li a {
 
   .poem {
     font-size: clamp(5rem, 10.8vw, 8rem);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .logo {
+    width: 87%;
+  }
+
+  .logo span {
+    margin-left: 6.5px;
+  }
+
+  .current-time span {
+    font-size: 1.5rem;
+  }
+
+  .hero-container {
+    width: 87%;
+  }
+
+  .hero-info p {
+    font-size: 1.5rem;
+  }
+
+  .author-info p {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding-left: 6.5px;
+    width: 87%;
+  }
+
+  h1 {
+    margin-top: 3rem;
+  }
+
+  nav {
+    right: -136px;
+  }
+
+  nav ul li a {
+    font-size: 1.35rem;
+  }
+
+  .poem {
+    font-size: clamp(4.3rem, 10.8vw, 8rem);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .logo {
+    width: 92%;
+  }
+
+  .logo span {
+    font-size: 1.8rem;
+  }
+
+  .current-time span {
+    font-size: 1.35rem;
+  }
+
+  .hero-container {
+    width: 92%;
+  }
+
+  .hero-info p {
+    font-size: 1.45rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  nav {
+    display: none;
+  }
+
+  section {
+    width: 92%;
+  }
+
+  .recent-list ul li a {
+    font-size: clamp(1.6rem, 6.5vw, 6rem);
+  }
+
+  .poem {
+    font-size: clamp(3.3rem, 10.8vw, 8rem);
   }
 }
