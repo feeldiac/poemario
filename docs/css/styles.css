@@ -44,8 +44,8 @@ body {
   overflow-x: hidden;
 }
 section {
-  margin-top: 12rem;
-  margin-bottom: 12rem;
+  margin-top: 15rem;
+  margin-bottom: 15rem;
   margin-left: auto;
   margin-right: auto;
   padding-left: 10px;
@@ -65,8 +65,7 @@ h1 {
   margin: 2rem 0 0 0;
   font-family: var(--ff-primary);
   font-weight: 700;
-  /* font-size: 11rem; */
-  font-size: clamp(6rem, 3rem + 12vw, 11rem);
+  font-size: clamp(6rem, 3rem + 12vw, 13rem);
   line-height: 1;
   text-align: left;
 }
@@ -181,11 +180,11 @@ nav ul li a {
 
 .hero-info {
   margin-left: auto;
-  width: 60%;
+  width: 70%;
 }
 
 .hero-info p {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 300;
   text-align: right;
   line-height: 1.2;
@@ -203,7 +202,7 @@ nav ul li a {
   color: var(--clr-black);
   font-family: var(--ff-primary);
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .current-time .moon-icon {
@@ -219,7 +218,7 @@ nav ul li a {
 }
 
 .author-info p {
-  font-size: 1.8rem;
+  font-size: 2rem;
   line-height: 1.2;
   text-align: justify;
 }
@@ -253,7 +252,7 @@ nav ul li a {
 .recent-list ul li a {
   font-family: var(--ff-primary);
   /* font-size: 5rem; */
-  font-size: clamp(2rem, 7vw, 5rem);
+  font-size: clamp(2rem, 7vw, 6rem);
 }
 
 .a {
@@ -305,7 +304,7 @@ nav ul li a {
 .poem {
   font-family: var(--ff-primary);
   /* font-size: 7rem; */
-  font-size: clamp(5rem, 11.5vw, 7rem);
+  font-size: clamp(5rem, 11.5vw, 8rem);
 }
 
 .poem:hover + span {
@@ -326,4 +325,30 @@ nav ul li a {
   width: 4rem;
   height: 4rem;
   display: none;
+}
+
+/*M    e   d   i   a  ____ Q   u   e   r   i   e   s*/
+
+@media only screen and (max-width: 1200px) {
+  .hero-info p {
+    font-size: 2.1rem;
+  }
+
+  .author-info p {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  nav {
+    right: -109px;
+  }
+
+  .recent-list ul li a {
+    font-size: clamp(2rem, 6.5vw, 6rem);
+  }
+
+  .poem {
+    font-size: clamp(5rem, 10.8vw, 8rem);
+  }
 }
