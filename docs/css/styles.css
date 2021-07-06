@@ -50,6 +50,7 @@ section {
   margin-right: auto;
   padding-left: 10px;
   width: 80%;
+  scroll-behavior: smooth;
 }
 ul {
   list-style-type: none;

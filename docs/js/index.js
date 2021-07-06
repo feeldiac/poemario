@@ -60,3 +60,25 @@ setInterval(showLogoWords, 10000);
 function getRandomNumber() {
   return Math.floor(Math.random() * words.length);
 }
+
+//Navbar scroll
+
+const links = document.querySelectorAll('.link');
+const banner = document.querySelector('.banner');
+links.forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const id = e.currentTarget.getAttribute('href').slice(1);
+    console.log(id);
+    const element = document.getElementById(id);
+    console.log(element);
+    const bannerHeight = banner.getBoundingClientRect().height;
+    console.log(bannerHeight);
+    let position = element.offsetTop - bannerHeight;
+    console.log(position);
+    window.scrollTo({
+      left: 0,
+      top: position,
+    });
+  });
+});
