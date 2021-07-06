@@ -69,16 +69,19 @@ links.forEach(function (link) {
   link.addEventListener('click', function (e) {
     e.preventDefault();
     const id = e.currentTarget.getAttribute('href').slice(1);
-    console.log(id);
     const element = document.getElementById(id);
-    console.log(element);
     const bannerHeight = banner.getBoundingClientRect().height;
-    console.log(bannerHeight);
     let position = element.offsetTop - bannerHeight;
-    console.log(position);
     window.scrollTo({
       left: 0,
       top: position,
     });
+
+    const viewportWidth = document.documentElement.clientWidth;
+    if (viewportWidth < 576) {
+      e.currentTarget.style.textDecoration = 'none';
+    } else {
+      e.currentTarget.style.textDecoration = 'line-through';
+    }
   });
 });
