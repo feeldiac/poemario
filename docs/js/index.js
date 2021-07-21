@@ -21,7 +21,7 @@ const moon = document.querySelector('.moon-icon');
 const showIcon = () => {
   const hour = new Date().getUTCHours();
   console.log(hour);
-  if (hour < 1 || hour > 11) {
+  if (hour < 0 || hour > 11) {
     moon.style.display = 'none';
     sun.style.display = 'inline-block';
   } else {
