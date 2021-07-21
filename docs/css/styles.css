@@ -337,6 +337,63 @@ nav ul li a {
   display: none;
 }
 
+/* F o o t e r */
+
+footer {
+  background-image: url('../img/footer-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  padding: 2rem 0;
+  /* backdrop-filter: grayscale(0.5) brightness(200%);
+  -webkit-backdrop-filter: grayscale(0.5) brightness(200%); */
+}
+
+.footer__center-container {
+  /* margin-top: 15rem; */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  width: 80%;
+  scroll-behavior: smooth;
+}
+
+.footer__slogan {
+  width: 60%;
+}
+
+.footer__slogan p,
+.email__address {
+  font-size: 2rem;
+  font-family: var(--ff-secondary);
+  font-weight: 300;
+}
+
+.footer__slogan strong {
+  font-family: var(--ff-primary);
+  font-weight: 300;
+}
+
+.footer__slogan,
+.email,
+.thank-msg,
+.copyright {
+  margin: 1.2rem auto;
+  text-align: center;
+  /* border: 1px solid black; */
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.thank-msg {
+  margin: 2.5rem auto;
+}
+
 /*M    e   d   i   a  ____ Q   u   e   r   i   e   s*/
 
 @media only screen and (max-width: 1200px) {
