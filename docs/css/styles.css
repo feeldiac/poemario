@@ -339,32 +339,34 @@ nav ul li a {
 
 /* F o o t e r */
 
-footer {
-  background-image: url('../img/footer-bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-color: rgba(255, 255, 255, 0.5); */
-  padding: 2rem 0;
-  /* backdrop-filter: grayscale(0.5) brightness(200%);
-  -webkit-backdrop-filter: grayscale(0.5) brightness(200%); */
+.social > a > img,
+.upward-btn > a > img {
+  width: 25px;
+  height: 25px;
 }
 
 .footer__center-container {
-  /* margin-top: 15rem; */
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  scroll-behavior: smooth;
   padding-left: 10px;
   width: 80%;
-  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
-.footer__slogan {
-  width: 60%;
+.footer__slogan-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--clr-black);
 }
 
-.footer__slogan p,
-.email__address {
-  font-size: 2rem;
+.footer__slogan,
+.social__title {
+  font-size: 1.5rem;
   font-family: var(--ff-secondary);
   font-weight: 300;
 }
@@ -374,24 +376,64 @@ footer {
   font-weight: 300;
 }
 
-.footer__slogan,
-.email,
-.thank-msg,
-.copyright {
-  margin: 1.2rem auto;
-  text-align: center;
-  /* border: 1px solid black; */
-}
-
-.email {
+.social {
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
   gap: 1rem;
 }
 
 .thank-msg {
-  margin: 2.5rem auto;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0.5rem 0;
+}
+
+#thank-msg__svg {
+  animation: fill 0.8s ease forwards 2s;
+}
+
+#thank-msg__svg path {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: line-anim 4s ease forwards;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+
+  to {
+    fill: black;
+  }
+}
+
+.footer__copyright-container {
+  padding: 1.5rem 0;
+  /* background-color: var(--clr-gray); */
+  /* background-color: #ccbaa6; */
+  /* background-color: #bfab8f; */
+  background-color: #b3997a;
+}
+
+.footer__copyright {
+  padding-left: calc(10px + 1.5%);
+  margin: 0 auto;
+  scroll-behavior: smooth;
+  width: 80%;
+  color: var(--clr-white);
+}
+
+.footer__copyright a {
+  color: var(--clr-white);
 }
 
 /*M    e   d   i   a  ____ Q   u   e   r   i   e   s*/

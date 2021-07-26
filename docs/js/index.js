@@ -85,3 +85,8 @@ links.forEach(function (link) {
     }
   });
 });
+
+//Footer Text Animation
+
+const footerSvg = document.querySelector('#thank-msg__svg path');
+console.log(footerSvg.getTotalLength());
