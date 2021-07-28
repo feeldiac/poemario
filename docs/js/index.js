@@ -8,7 +8,7 @@ const getHour = () => {
     hour12: true,
     timeStyle: 'medium',
   });
-  clock.innerHTML = `${time} barranquilla`;
+  clock.innerHTML = `${time} &#8641; Colombia`;
 };
 
 setInterval(getHour, 1000);

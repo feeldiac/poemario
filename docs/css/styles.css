@@ -371,6 +371,7 @@ nav ul li a {
   font-size: 1.5rem;
   font-family: var(--ff-secondary);
   font-weight: 300;
+  text-align: end;
 }
 
 .footer__slogan strong {
@@ -409,6 +410,11 @@ nav ul li a {
   animation: line-anim 4s ease forwards;
 }
 
+#thank-msg__svg {
+  width: 450px;
+  height: 45px;
+}
+
 #thank-msg__svg path {
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
@@ -444,10 +450,12 @@ nav ul li a {
   scroll-behavior: smooth;
   width: 80%;
   color: var(--clr-white);
+  font-size: 1.3rem;
 }
 
 .footer__copyright a {
   color: var(--clr-white);
+  /* font-size: 1.5rem; */
 }
 
 /*M    e   d   i   a  ____ Q   u   e   r   i   e   s*/
@@ -459,6 +467,20 @@ nav ul li a {
 
   .author-info p {
     font-size: 1.8rem;
+  }
+
+  .footer__slogan,
+  .social__title {
+    font-size: 1.2rem;
+  }
+
+  .footer__copyright {
+    font-size: 1rem;
+  }
+
+  #thank-msg__svg {
+    width: 350px;
+    height: 35px;
   }
 }
 
@@ -473,6 +495,20 @@ nav ul li a {
 
   .poem {
     font-size: clamp(5rem, 10.8vw, 8rem);
+  }
+
+  .footer__slogan,
+  .social__title {
+    font-size: 0.935rem;
+  }
+
+  .footer__copyright {
+    font-size: 0.875rem;
+  }
+
+  #thank-msg__svg {
+    width: 270px;
+    height: 27px;
   }
 }
 
@@ -501,7 +537,9 @@ nav ul li a {
     font-size: 1.5rem;
   }
 
-  section {
+  section,
+  .footer__center-container,
+  .footer__copyright {
     padding-left: 6.5px;
     width: 87%;
   }
@@ -520,6 +558,28 @@ nav ul li a {
 
   .poem {
     font-size: clamp(4.3rem, 10.8vw, 8rem);
+  }
+
+  .footer__slogan,
+  .social__title {
+    font-size: 0.77rem;
+  }
+
+  .footer__copyright {
+    font-size: 0.75rem;
+  }
+
+  .social > a,
+  .upward-btn a,
+  .social > a > img,
+  .upward-btn > a > img {
+    width: 18px;
+    height: 18px;
+  }
+
+  #thank-msg__svg {
+    width: 210px;
+    height: 21px;
   }
 }
 
@@ -557,7 +617,7 @@ nav ul li a {
     right: auto;
     width: 100%;
     height: 2.5rem;
-    background-color: #e3dede;
+    background-color: #ccbaa6;
     display: flex;
     align-items: center;
     /* border: 1px solid black; */
@@ -593,7 +653,9 @@ nav ul li a {
     text-transform: capitalize;
   }
 
-  section {
+  section,
+  .footer__center-container,
+  .footer__copyright {
     width: 92%;
   }
 
@@ -603,5 +665,16 @@ nav ul li a {
 
   .poem {
     font-size: clamp(3.3rem, 10.8vw, 8rem);
+  }
+
+  .footer__copyright-container {
+    padding: 1.5rem 0;
+    padding-bottom: calc(1.5rem + 40px);
+    background-color: var(--clr-white);
+  }
+
+  .footer__copyright {
+    padding-left: calc(6.5px + 1.5%);
+    color: var(--clr-black);
   }
 }
