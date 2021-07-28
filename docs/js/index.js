@@ -86,7 +86,65 @@ links.forEach(function (link) {
   });
 });
 
-//Footer Text Animation
+///Footer Text Animation
 
+// SVG path length
 const footerSvg = document.querySelector('#thank-msg__svg path');
-console.log(footerSvg.getTotalLength());
+// console.log(footerSvg.getTotalLength());
+
+//Footer back to top button
+const upwardBtn = document.querySelector('.upward-btn a');
+upwardBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  window.scrollTo({
+    left: 0,
+    top: 0,
+  });
+});
+
+// get the element to animate
+const element = document.querySelector('#thank-msg__svg path');
+const toFillElement = document.querySelector('#thank-msg__svg');
+const elementHeight = element.clientHeight;
+
+// listen for scroll event and call animate function
+document.addEventListener('scroll', animate);
+
+// check if element is in view
+function inView() {
+  // get window height
+  const windowHeight = window.innerHeight;
+  // get number of pixels that the document is scrolled
+  const scrollY = window.scrollY || window.pageYOffset;
+  // get current scroll position (distance from the top of the page to the bottom of the current viewport)
+  const scrollPosition = scrollY + windowHeight;
+  // get element position (distance from the top of the page to the bottom of the element)
+  const elementPosition =
+    element.getBoundingClientRect().top + scrollY + elementHeight;
+
+  // console.log(`ScrollY: ${scrollY},
+  // windowHeight: ${windowHeight},
+  // elementHeight: ${elementHeight},
+  // elementgetBoundingClientRecttop: ${element.getBoundingClientRect().top},
+  // scrollPosition: ${scrollPosition},
+  // elementPosition: ${elementPosition} `);
+
+  // is scroll position greater than element position? (is element in view?)
+  if (scrollPosition > elementPosition) {
+    return true;
+  }
+  return false;
+}
+
+// animate element when it is in view
+function animate() {
+  // is element in view?
+  if (inView()) {
+    // element is in view, add class to element
+    element.classList.add('animate-line');
+    toFillElement.classList.add('animate-fill');
+  } else {
+    element.classList.remove('animate-line');
+    toFillElement.classList.remove('animate-fill');
+  }
+}

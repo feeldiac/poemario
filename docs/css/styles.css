@@ -339,6 +339,8 @@ nav ul li a {
 
 /* F o o t e r */
 
+.social > a,
+.upward-btn a,
 .social > a > img,
 .upward-btn > a > img {
   width: 25px;
@@ -384,20 +386,32 @@ nav ul li a {
   gap: 1rem;
 }
 
+.social a {
+  visibility: hidden;
+}
+
+.social:hover a,
+.social__title:hover ~ a {
+  visibility: visible;
+}
+
 .thank-msg {
   display: flex;
   justify-content: flex-end;
   margin: 0.5rem 0;
 }
 
-#thank-msg__svg {
+.animate-fill {
   animation: fill 0.8s ease forwards 2s;
+}
+
+.animate-line {
+  animation: line-anim 4s ease forwards;
 }
 
 #thank-msg__svg path {
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-  animation: line-anim 4s ease forwards;
 }
 
 @keyframes line-anim {
