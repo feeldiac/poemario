@@ -8,7 +8,7 @@ const getHour = () => {
     hour12: true,
     timeStyle: 'medium',
   });
-  clock.innerHTML = `${time} &#8641; Colombia`;
+  clock.innerHTML = `${time} BAQ`;
 };
 
 setInterval(getHour, 1000);
@@ -102,12 +102,27 @@ upwardBtn.addEventListener('click', function (e) {
   });
 });
 
+//Text reveal animation
+const recentPoems = document.querySelectorAll('.recent__link');
+
+function check(entries) {
+  entries.map((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('reveal-text');
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+const observer = new IntersectionObserver(check);
+recentPoems.forEach((elem) => observer.observe(elem));
+
 // get the element to animate
 const element = document.querySelector('#thank-msg__svg path');
 const toFillElement = document.querySelector('#thank-msg__svg');
 const elementHeight = element.clientHeight;
 
-// listen for scroll event and call animate function
+//listen for scroll event and call animate function
 document.addEventListener('scroll', animate);
 
 // check if element is in view
@@ -121,14 +136,6 @@ function inView() {
   // get element position (distance from the top of the page to the bottom of the element)
   const elementPosition =
     element.getBoundingClientRect().top + scrollY + elementHeight;
-
-  // console.log(`ScrollY: ${scrollY},
-  // windowHeight: ${windowHeight},
-  // elementHeight: ${elementHeight},
-  // elementgetBoundingClientRecttop: ${element.getBoundingClientRect().top},
-  // scrollPosition: ${scrollPosition},
-  // elementPosition: ${elementPosition} `);
-
   // is scroll position greater than element position? (is element in view?)
   if (scrollPosition > elementPosition) {
     return true;
@@ -143,8 +150,5 @@ function animate() {
     // element is in view, add class to element
     element.classList.add('animate-line');
     toFillElement.classList.add('animate-fill');
-  } else {
-    element.classList.remove('animate-line');
-    toFillElement.classList.remove('animate-fill');
   }
 }
